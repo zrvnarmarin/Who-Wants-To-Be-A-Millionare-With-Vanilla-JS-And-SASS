@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who wants to be a millionare</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/2fd1fc0d1b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="heading-container">
+        <h1>Who Wants To Be A Millionare</h1>
+        <button class="exit-button">Izlaz</button>
+    </div>
+
+    <main class="main-container">
+
+        <div class="questions-container">
+            <p class="question">Tko se ne vidi iz Splita?</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="jokers">
+                <button class="fifty-fifty-joker-button">
+                    50:50
+                </button>
+                <button class="call-joker-button">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+                <button class="-joker-button">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+
+            <div class="total-amount">
+                <h3 class="amount">Total amount :</h3>
+            </div>
+
+            <div class="total-amount-value">
+                <h3 class="amount">1.000.000 Kn</h3>
+            </div>
+
+            <div class="offered-amounts">
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+                <div class="offered-amount">
+                    15 500.000 Kn
+                </div>
+            </div>
+
+        </div>
+
+        <div class="answers-container">
+            <div class="first-answer">A. Marin</div>
+            <div class="second-answer">B. Isus</div>
+            <div class="third-answer">C. Marin</div>
+            <div class="fourth-answer">D. Isus</div>
+        </div>
+
+    </main>
+
+</body>
+</html>
+
+<script>
+    fetch('questions.json')
+    .then(response => {
+        return response.json()
+    })
+    .then(data => {
+        console.log(data)
+    })
+</script>
+
+<style>
+    
+
+
+</style>

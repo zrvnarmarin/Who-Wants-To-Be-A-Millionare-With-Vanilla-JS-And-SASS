@@ -1,0 +1,71 @@
+body { 
+    /* background-image: url('https://content.betway.com/Storage/3/38276489.jpeg'); 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;  */
+    background-color: #464646; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.questions-container {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+@media (max-width: 670px) {
+    body {
+        background-color: red;
+    }
+
+    .main-container {
+        grid-template-columns: repeat(1, 1fr);
+        background-color: green;
+    }
+
+    .questions-container {
+        order: 1;
+    }
+
+    .answers-container {
+        order: 2;
+    }
+
+    .stats-container {
+        order: 3;
+    }
+}
