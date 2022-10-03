@@ -61,7 +61,7 @@ body {
 }
 
 .question {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     color: var(--clr-text-white);
     margin: 60px;
 }
@@ -120,6 +120,7 @@ body {
 
 .stats-container .jokers button:hover {
     background-color: var(--clr-orange-primary);
+    color: var(--clr-text-black);
 }
 
 .stats-container .total-amount {
@@ -158,24 +159,36 @@ body {
     padding-left: 10px;
 }
 
-.offered-amounts tr {
+.offered-amounts .question-index {
     display: flex;
-    gap: 50px;
-    color: var(--clr-orange-primary);
+    align-items: center;
+    justify-content: flex-end;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: none;
 }
 
-.offered-amounts tr:hover {
-    color: var(--clr-text-black);
-    background-color: var(--clr-orange-primary);
+.offered-amounts .amount-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 0 40px 0 40px;
+    border: none;
 }
 
-.white {
+tr {
+    color: var(--clr-orange-primary);
+ }
+
+ .white {
     color: white;
+ }
+
+tr:hover {
+   background-color: var(--clr-orange-primary);
+   color: var(--clr-text-black);
 }
-
-
 
 
 
