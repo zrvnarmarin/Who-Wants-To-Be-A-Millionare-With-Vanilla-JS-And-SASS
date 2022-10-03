@@ -1,15 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@500;700&family=Raleway&family=Roboto:wght@500&family=Ubuntu+Condensed&display=swap');
+
+:root {
+    --clr-blue-primary: rgb(11, 4, 117, 0.95);
+    --clr-blue-secondary: rgb(57, 55, 242, 0.9);
+    --clr-blue-tertiary: rgb(1, 1, 233, 0.8);
+    --clr-orange-primary: #f86b10;
+    --clr-body-border: #23136f;
+    --clr-border: #2f2ef1;
+    --clr-text-white: #f3efef;
+    --clr-text-black: #020002; 
+    --clr-selected-answer: gold;
+    --clr-true-answer: #0cf110;
+    --clr-false-answer: #ee0312;
+    --clr-icons-white: #f3efef;
+    --clr-stats-border: #0201eb;
+}
+
 body { 
-    /* background-image: url('https://content.betway.com/Storage/3/38276489.jpeg'); 
+    background-image: url('https://content.betway.com/Storage/3/38276489.jpeg'); 
     background-position: center center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    background-size: cover;  */
+    background-size: cover; 
+    max-width: 1200px;
     background-color: #464646; 
     padding: 0;
     margin: 0;
     list-style: none;
     box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
 }
+
+/* Heading */
 
 .heading-container {
     display: flex;
@@ -20,32 +43,143 @@ body {
     border: 1px solid black;
 }
 
+/* Main container */
+
 .main-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
+
+/* Questions stuff */
 
 .questions-container {
-    border: 1px solid black;
+    border: 5px solid var(--clr-border);
     margin: 10px;
+    background-color: var(--clr-blue-primary);
+    border-radius: 10px;
+    grid-column: 1/7;
 }
+
+.question {
+    font-size: 1.7rem;
+    color: var(--clr-text-white);
+    margin: 60px;
+}
+
+/* Answers stuff */
 
 .answers-container {
+    border: 5px solid var(--clr-border);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 1px solid black;
     margin: 10px;
+    background-color: var(--clr-blue-primary);
+    border-radius: 10px;
+    grid-column: 1 / 7;
 }
 
+
+
+/* Stats stuff */
+
 .stats-container {
+    border: 5px solid var(--clr-border);
+    gap: 30px;
+    margin: 10px;
+    background-color: var(--clr-blue-primary);
+    border-radius: 10px;
+    grid-column: 7 / 9;
+}
+
+.stats-container .jokers {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 2px;
+    margin: 0;
+    border-bottom: 1px solid var(--clr-stats-border);
+}
+
+.stats-container .jokers button {
+    width: 100%;
+    height: 50%;
+    border-radius: 180px/90px;
+    padding: 10px;
+    cursor: pointer;
+    border: 4px solid var(--clr-border);
+    color: white;
+    border: 3px solid var(--clr-stats-border);
+    background-color: var(--clr-text-black);
+}
+
+.stats-container .jokers button  {
+    font-size: 1rem;
+}
+
+.stats-container .jokers button:hover {
+    background-color: var(--clr-orange-primary);
+}
+
+.stats-container .total-amount {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    border: 1px solid black;
-    margin: 10px;
+    border-bottom: 1px solid var(--clr-stats-border);
 }
+
+.stats-container .total-amount .amount {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--clr-text-white);
+    padding: 10px;
+    margin: 0;
+}
+
+.stats-container .total-amount-value {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.stats-container .total-amount-value .amount {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--clr-text-white);
+    font-weight: 500;
+}
+
+.offered-amounts {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.offered-amounts tr {
+    display: flex;
+    gap: 50px;
+    color: var(--clr-orange-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.offered-amounts tr:hover {
+    color: var(--clr-text-black);
+    background-color: var(--clr-orange-primary);
+}
+
+.white {
+    color: white;
+}
+
+
+
+
+
+/* Media queries */
 
 @media (max-width: 670px) {
     body {
