@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@500;700&family=Raleway&family=Roboto:wght@500&family=Ubuntu+Condensed&display=swap');
 
 :root {
-    --clr-blue-primary: rgb(11, 4, 117, 0.95);
-    --clr-blue-secondary: rgb(57, 55, 242, 0.9);
-    --clr-blue-tertiary: rgb(1, 1, 233, 0.8);
+    --clr-blue-primary: #0b0475f2;
+    --clr-blue-secondary: #3937f2e6;
+    --clr-blue-tertiary: #0101e9cc;
     --clr-orange-primary: #f86b10;
     --clr-body-border: #23136f;
     --clr-border: #2f2ef1;
@@ -27,7 +27,7 @@
 }
 
 body { 
-    background-image: url('https://content.betway.com/Storage/3/38276489.jpeg'); 
+    background-image: url(./background.jpg); 
     background-position: center center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -35,6 +35,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    height: 3000px;
 }
 
 /* Header */
@@ -67,7 +68,10 @@ body {
     padding: 10px 20px;
 }
 
-
+.heading-container button:hover {
+    background-color: var(--clr-orange-primary);
+    color: var(--clr-text-black);
+}
 
 /* Main container */
 
@@ -85,7 +89,7 @@ body {
     background-color: var(--clr-blue-primary);
     border-radius: 10px;
     grid-column: 1/7;
-    grid-row: 1 / 7;
+    grid-row: 1 / 6;
 }
 
 .question {
@@ -97,16 +101,28 @@ body {
 /* Answers stuff */
 
 .answers-container {
-    border: 5px solid var(--clr-border);
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 10px;
-    background-color: var(--clr-blue-primary);
-    border-radius: 10px;
+    gap: 10px;
     grid-column: 1 / 7;
+    
 }
 
-
+.answers-container div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+    gap: 10px;
+    border-radius: 10px;
+    border: 5px solid var(--clr-border);
+    background-color: var(--clr-blue-primary);
+    color: var(--clr-text-white);
+    font-size: 1.5rem;
+    padding: 20px;
+}
 
 /* Stats stuff */
 
@@ -224,11 +240,8 @@ tr:hover {
 /* Media queries */
 
 @media (max-width: 670px) {
-    body {
-    }
-
     .main-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     }
 
     .questions-container {
@@ -237,9 +250,11 @@ tr:hover {
 
     .answers-container {
         order: 2;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     }
 
     .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
         order: 3;
     }
 }
