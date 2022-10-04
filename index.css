@@ -27,7 +27,7 @@
 }
 
 body { 
-    background-image: url(./background.jpg); 
+    background-image: url(./background.webp); 
     background-position: center center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -229,15 +229,15 @@ body {
     border: none;
 }
 
-tr {
+.offered-amounts-row {
     color: var(--clr-orange-primary);
  }
 
- .white {
+.white {
     color: white;
- }
+}
 
-tr:hover {
+.offered-amounts tr:hover {
    background-color: var(--clr-orange-primary);
    color: var(--clr-text-black);
 }

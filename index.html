@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who Wants To Be A Millionare</title>
     <link rel="stylesheet" href="index.css">
+    <meta name="A fun quiz app in ehich player must answer questions to get his millions dollars">
     <script src="https://kit.fontawesome.com/2fd1fc0d1b.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     
@@ -17,90 +19,90 @@
     <main class="main-container">
 
         <div class="questions-container">
-            <p class="question">Tko se ne vidi iz Splita ?</p>
+            <p id="question" class="question">Tko se ne vidi iz Splita ?</p>
         </div>
 
         <div class="stats-container">
             <div class="jokers">
-                <button class="fifty-fifty-joker-button">
+                <button id="fifty-fifty-button" class="fifty-fifty-joker-button" aria-label="divide">
                     50:50
                 </button>
-                <button class="call-joker-button">
+                <button id="call-button" class="call-joker-button" aria-label="call">
                     <i class="fa-solid fa-phone"></i>
                 </button>
-                <button class="-joker-button">
+                <button id="crowd-button" class="crowd-joker-button" aria-label="ask-crowd">
                     <i class="fa-solid fa-user"></i>
                 </button>
             </div>
 
             <div class="total-amount">
-                <h3 class="amount">Total amount :</h3>
+                <h1 class="amount">Total amount :</h1>
             </div>
 
             <div class="total-amount-value">
-                <h3 class="amount">1.000.000 Kn</h3>
+                <h1 id="total-amount-value" class="amount">1.000.000 Kn</h1>
             </div>
 
             <div class="offered-amounts">
                <table>
                     <tbody>
-                        <tr class="white">
+                        <tr class="offered-amounts-row white">
                             <td class="question-index">15</td>
                             <td class="amount-value">1 MILIJUN</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">14</td>
                             <td class="amount-value">500,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">13</td>
                             <td class="amount-value">250,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">12</td>
                             <td class="amount-value">125,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">11</td>
                             <td class="amount-value">64,000 Kn</td>
                         </tr>
-                        <tr class="white">
+                        <tr class="offered-amounts-row white">
                             <td class="question-index">10</td>
                             <td class="amount-value">32,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">9</td>
                             <td class="amount-value">16,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">8</td>
                             <td class="amount-value">8,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">7</td>
                             <td class="amount-value">4,000 kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">6</td>
                             <td class="amount-value">2,000 Kn</td>
                         </tr>
-                        <tr class="white">
+                        <tr class="offered-amounts-row white">
                             <td class="question-index">5</td>
                             <td class="amount-value">1,000 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">4</td>
                             <td class="amount-value">500 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">3</td>
                             <td class="amount-value">300 Kn</td>
                         </tr>
-                        <tr>
+                        <tr class="offered-amounts-row">
                             <td class="question-index">2</td>
                             <td class="amount-value">200 Kn</td>
                         </tr>
-                        <tr class="white">
+                        <tr class="offered-amounts-row white">
                             <td class="question-index">1</td>
                             <td class="amount-value">100 Kn</td>
                         </tr>
