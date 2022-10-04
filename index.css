@@ -14,6 +14,16 @@
     --clr-false-answer: #ee0312;
     --clr-icons-white: #f3efef;
     --clr-stats-border: #0201eb;
+    --clr-heading: hsl(242, 69%, 63%);
+    --clr-heading-text-shadow: hsla(242, 39%, 63%, 0.314);
+    --clr-exit-button-border: #0169a4;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 body { 
@@ -23,16 +33,11 @@ body {
     background-attachment: fixed; 
     background-size: cover; 
     max-width: 1200px;
-    background-color: #464646; 
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-sizing: border-box;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Heading */
+/* Header */
 
 .heading-container {
     display: flex;
@@ -40,14 +45,36 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
+    position: relative;
+    padding: 20px;
 }
+
+.heading-container h1 {
+    font-size: 4rem;
+    color: var(--clr-heading);
+    text-shadow: 5px 5px var(--clr-heading-text-shadow);
+}
+
+.heading-container button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 2px solid var(--clr-exit-button-border);
+    color: var(--clr-text-white);
+    background-color: var(--clr-blue-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+
 
 /* Main container */
 
 .main-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 100px) ;
 }
 
 /* Questions stuff */
@@ -58,6 +85,7 @@ body {
     background-color: var(--clr-blue-primary);
     border-radius: 10px;
     grid-column: 1/7;
+    grid-row: 1 / 7;
 }
 
 .question {
@@ -89,6 +117,7 @@ body {
     background-color: var(--clr-blue-primary);
     border-radius: 10px;
     grid-column: 7 / 9;
+    grid-row: 1 / 8;
 }
 
 .stats-container .jokers {
@@ -163,14 +192,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 0.1rem, 1.5rem);
     font-weight: 900;
     letter-spacing: 1px;
     border: none;
 }
 
 .offered-amounts .amount-value {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 0.1rem, 1.5rem);
     font-weight: 900;
     letter-spacing: 1px;
     padding: 0 40px 0 40px;
@@ -196,12 +225,10 @@ tr:hover {
 
 @media (max-width: 670px) {
     body {
-        background-color: red;
     }
 
     .main-container {
         grid-template-columns: repeat(1, 1fr);
-        background-color: green;
     }
 
     .questions-container {
